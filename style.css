@@ -32,7 +32,8 @@ section {
 
 .navigation-container,
 .formation-container,
-.article-container {
+.article-container,
+.technologie-container {
     padding: 16px;
     max-width: 100%;
 }
@@ -40,7 +41,8 @@ section {
 
 .nav-header,
 .formation-header,
-.article-header {
+.article-header,
+.technologie-header {
     padding: 8px 0px;
     color: #1E293B;
 }
@@ -360,4 +362,33 @@ section {
 .author-role {
     color: #64748B;
     margin-top: 2px;
+}
+
+.technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.tech-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.tech-item:hover {
+    background-color: #e3f2fd;
+    border-color: #1976d2;
+    color: #1976d2;
+    transform: translateY(-2px);
 }
