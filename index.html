@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier Grid vs Flexbox</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main>
+        <!-- Section 1 : Navigation principale -->
+        <section class="section-navbar">
+            <div class="navigation-container">
+                <div class="nav-header">
+                    <h1>Navigation principale</h1>
+                </div>
+
+                <nav class="navbar">
+                    <div class="navbar-left">
+                        <a href="#" class="logo">TechPro</a>
+
+                        <ul class="nav-menu">
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">Produits</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-right">
+                        <a href="#" class="btn-connect">Se connecter</a>
+                        <a href="#" class="btn-register">S'inscrire</a>
+                    </div>
+                </nav>
+
+                <div class="justification-bar">
+                    <span class="justification-label">Justification :</span>
+                    J'ai choisit le display flex avec plusieurs div permettant plus de flexibilité pour positionner
+                    chaque div
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section 2 : Nos formations populaires -->
+        <section class="section-formations">
+            <div class="formation-container">
+                <div class="formation-header">
+                    <h1>Nos formations populaires</h1>
+                </div>
+
+                <div class="formations-grid">
+
+                    <div class="formation-card">
+                        <div class="card-header javascript">
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-badges">
+                                <span class="badge development">Développement</span>
+                                <span class="duration">12h de cours</span>
+                            </div>
+                            <h4 class="formation-title">JavaScript Moderne</h4>
+                            <p class="formation-description">Maîtrisez ES6+, asynchrone/await et les frameworks
+                                modernes.</p>
+                            <div class="card-footer">
+                                <span class="price">299 €</span>
+                                <button class="btn-enroll">S'inscrire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formation-card">
+                        <div class="card-header react">
+                            <h3>React</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-badges">
+                                <span class="badge framework">Framework</span>
+                                <span class="duration">15h de cours</span>
+                            </div>
+                            <h4 class="formation-title">React Avancé</h4>
+                            <p class="formation-description">Créez des applications web performantes avec React</p>
+                            <div class="card-footer">
+                                <span class="price">399 €</span>
+                                <button class="btn-enroll">S'inscrire</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formation-card">
+                        <div class="card-header nodejs">
+                            <h3>Node.js</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-badges">
+                                <span class="badge backend">Backend</span>
+                                <span class="duration">18h de cours</span>
+                            </div>
+                            <h4 class="formation-title">Node.js & Express</h4>
+                            <p class="formation-description">Développez des API REST et applications serveur</p>
+                            <div class="card-footer">
+                                <span class="price">449 €</span>
+                                <button class="btn-enroll">S'inscrire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="justification-bar">
+                    <span class="justification-label">Justification :</span>
+                    J'ai utilisé CSS Grid pour cette section car elle permet un alignement parfait des cartes en
+                    colonnes et s'adapte automatiquement au nombre d'éléments , pour les cartes j'ai utilisé le display
+                    flex car je trouvais cela p[lus pratique pour disposer les élèments comme je le souhaite.
+                </div>
+            </div>
+        </section>
+        <section class="section-article">
+            <div class="article-container">
+                <div class="article-header">
+                    <h1>Article à la une</h1>
+                </div>
+
+                <div class="article-content">
+                    <div class="article-image">
+                        Intelligence Artificielle
+                    </div>
+
+                    <div class="article-info">
+                        <div class="article-meta">
+                            <span class="tech-badge">Technologies</span>
+                            <span class="reading-time">10 min de lecture</span>
+                        </div>
+
+                        <h2 class="article-title">L'Impact de l'IA sur le Développement Web en 2024</h2>
+
+                        <p class="article-description">
+                            L'intelligence artificielle révolutionne la façon dont nous concevons et développons des
+                            applications web. Découvrez les dernières innovations et leur impact sur l'industrie du
+                            développement...
+                        </p>
+
+                        <div class="author-info">
+                            <div class="author-avatar">ML</div>
+                            <div class="author-details">
+                                <div class="author-name">Marie Laurent</div>
+                                <div class="author-role">Lead Développeur @ TechPro</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="justification-bar">
+                    <span class="justification-label">Justification :</span>
+                    Ici j'ai choisit le display flex car je trouvais cela plus simple pour la disposition des élèments
+                </div>
+            </div>
+        </section>
+        <!-- .... -->
+    </main>
+</body>
+
+</html>

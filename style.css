@@ -1,0 +1,368 @@
+/* ------------------------------------ */
+/* 🌐 Feuille de style corrigée */
+/* ------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 32px 32px 80px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f8fafc;
+    color: #64748b;
+}
+
+section {
+    margin-bottom: 47.8px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+
+
+.navigation-container,
+.formation-container,
+.article-container {
+    padding: 16px;
+    max-width: 100%;
+}
+
+
+.nav-header,
+.formation-header,
+.article-header {
+    padding: 8px 0px;
+    color: #1E293B;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    border: 1px solid #E2E8F0;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo {
+    background-color: #2563EB;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #2563EB;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-connect {
+    color: #2563EB;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-connect:hover {
+    background-color: #f1f3f4;
+}
+
+.btn-register {
+    background-color: #2563EB;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #3367d6;
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+
+.justification-bar {
+    background-color: #DBEAFE;
+    padding: 8px 16px;
+    border-top: 1px solid #e9ecef;
+    font-size: 13px;
+    color: #1E293B;
+    border-radius: 8px;
+}
+
+.justification-label {
+    color: #1976d2;
+    margin-right: 4px;
+}
+
+.formations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.formation-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 16px;
+}
+
+.formation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.card-header.javascript,
+.card-header.react,
+.card-header.nodejs {
+    background: linear-gradient(135deg, #4285f4, #1976d2);
+}
+
+.card-content {
+    padding: 20px 0px;
+}
+
+.card-badges {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge.development,
+.badge.framework,
+.badge.backend {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.duration {
+    font-size: 12px;
+    color: #64748B;
+}
+
+.formation-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 8px;
+}
+
+.formation-description {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E293B;
+}
+
+.btn-enroll {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-enroll:hover {
+    background-color: #3367d6;
+    transform: scale(1.05);
+}
+
+.article-container {
+    padding: 16px;
+    max-width: 100%;
+}
+
+.article-header {
+    padding: 8px 0px;
+    color: #1E293B;
+    margin-bottom: 20px;
+}
+
+.article-header h1 {
+    color: #1E293B;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.article-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+.article-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #4285f4, #1976d2);
+    border-radius: 8px 0px 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.article-info {
+    flex: 1;
+    padding: 12px 0px;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.tech-badge {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.reading-time {
+    font-size: 12px;
+    color: #666;
+}
+
+.article-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.article-description {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #4285f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.author-details {
+    font-size: 12px;
+}
+
+.author-name {
+    color: 1E293B;
+    font-weight: 600;
+}
+
+.author-role {
+    color: #64748B;
+    margin-top: 2px;
+}
