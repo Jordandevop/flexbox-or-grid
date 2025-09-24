@@ -261,14 +261,9 @@ section {
 .article-header {
     padding: 8px 0px;
     color: #1E293B;
-    margin-bottom: 20px;
+
 }
 
-.article-header h1 {
-    color: #1E293B;
-    font-size: 18px;
-    font-weight: 600;
-}
 
 .article-content {
     display: flex;
