@@ -377,3 +377,13 @@ template {
 [hidden] {
     display: none;
 }
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+a {
+    text-decoration: none;
+    color: none;
+}
