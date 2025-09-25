@@ -1,7 +1,3 @@
-/* ------------------------------------ */
-/* 🌐 Feuille de style corrigée */
-/* ------------------------------------ */
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
@@ -22,7 +18,6 @@ main {
 }
 
 body {
-
     background: #f8fafc;
     color: #64748b;
 }
@@ -48,17 +43,14 @@ h2 {
     max-width: 100%;
 }
 
-
 .nav-header,
 .formation-header,
 .article-header,
 .technologie-header,
 .projet-header {
     padding: 8px 0px;
-
     color: #1E293B;
 }
-
 
 .navbar {
     display: flex;
@@ -67,9 +59,9 @@ h2 {
     padding: 21px;
     border-radius: 8px;
     margin-bottom: 24px;
-
     background-color: #FFFFFF;
     border: 1px solid #E2E8F0;
+    position: relative;
 }
 
 .navbar-left {
@@ -84,11 +76,41 @@ h2 {
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
-
     background-color: #2563EB;
     color: white;
 }
 
+/* Menu burger styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    gap: 3px;
+    z-index: 1000;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #64748b;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
 
 .nav-menu {
     display: flex;
@@ -112,12 +134,16 @@ h2 {
 
 .nav-menu a:hover {
     color: #2563EB;
+}
 
+/* Masquer les boutons mobiles en desktop */
+.mobile-buttons {
+    display: none;
 }
 
 .navbar-right {
     display: flex;
-    gap: 35px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -151,7 +177,6 @@ h2 {
     transition: all 0.2s;
 }
 
-
 .justification-bar {
     background-color: #DBEAFE;
     padding: 8px 16px;
@@ -179,7 +204,7 @@ h2 {
     overflow: hidden;
     background: white;
     transition: transform 0.2s, box-shadow 0.2s;
-    padding: 16px;
+    padding: 21px;
 }
 
 .formation-card:hover {
@@ -188,18 +213,18 @@ h2 {
 }
 
 .card-header {
-    color: white;
-    padding: 32px 20px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    border-radius: 8px;
+    width: 329px;
+    height: 197px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-header.javascript,
-.card-header.react,
-.card-header.nodejs {
-    background: linear-gradient(135deg, #4285f4, #1976d2);
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .card-content {
@@ -283,9 +308,7 @@ h2 {
 .article-header {
     padding: 8px 0px;
     color: #1E293B;
-
 }
-
 
 .article-content {
     display: flex;
@@ -296,18 +319,11 @@ h2 {
     border-radius: 8px;
 }
 
-.article-image {
-    flex-shrink: 0;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #4285f4, #1976d2);
+.article-image img {
+    width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 8px 0px 0px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
 }
 
 .article-info {
@@ -333,7 +349,7 @@ h2 {
 
 .reading-time {
     font-size: 0.9rem;
-    color: #666;
+    color: #64748b;
 }
 
 .article-title {
@@ -415,42 +431,35 @@ h2 {
 
 .projets-grid {
     display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(2, 350px);
-    gap: 32px;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: repeat(2, 298px);
+    gap: 16px;
     margin-bottom: 20px;
-
 }
 
-.projet-card {
-    background: linear-gradient(135deg, #4285f4, #1976d2);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.5rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
+.projet-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.projet-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.projet-card:hover img {
+    transform: scale(1.05);
 }
 
 .projet-card:nth-child(5) {
     grid-column: span 2;
 }
 
-#collection-projet {
-    font-size: 2.2rem;
-}
 
-.projet-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
-}
+/* Media Queries Responsive */
 
-/* ------------------------------------ */
-/*      Media Queries Responsive */
-/* ------------------------------------ */
 
 /* Tablettes (768px et moins) */
 @media (max-width: 768px) {
@@ -460,29 +469,71 @@ h2 {
         padding: 16px;
     }
 
+    /* Menu burger visible */
+    .burger-menu {
+        display: flex;
+    }
+
     /* Navigation responsive */
     .navbar {
-        flex-direction: column;
-        gap: 16px;
+        flex-wrap: wrap;
         padding: 16px;
     }
 
     .navbar-left {
-        flex-direction: column;
-        gap: 16px;
         width: 100%;
-        text-align: center;
+        justify-content: space-between;
     }
 
+    /* Menu mobile caché par défaut */
     .nav-menu {
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border: 1px solid #E2E8F0;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        flex-direction: column;
+        gap: 0;
+        padding: 16px 0;
+        z-index: 999;
     }
 
-    .navbar-right {
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
         width: 100%;
-        justify-content: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px 24px;
+        border-bottom: 1px solid #f1f5f9;
+        width: 100%;
+    }
+
+    .nav-menu a:hover {
+        background-color: #f8fafc;
+    }
+
+    /* Afficher les boutons dans le menu mobile */
+    .mobile-buttons {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 24px;
+        border-top: 1px solid #E2E8F0;
+        margin-top: 8px;
+    }
+
+    /* Masquer les boutons desktop en mobile */
+    .navbar-right {
+        display: none;
     }
 
     /* Formations responsive */
@@ -496,9 +547,8 @@ h2 {
         flex-direction: column;
     }
 
-    .article-image {
+    .article-image img {
         width: 100%;
-        height: 150px;
         border-radius: 8px 8px 0 0;
     }
 
@@ -542,11 +592,11 @@ h2 {
     }
 
     /* Navigation mobile */
-    .navbar-left {
-        gap: 12px;
+    .navbar {
+        padding: 12px;
     }
 
-    .nav-menu {
+    .navbar-left {
         gap: 12px;
     }
 
@@ -555,16 +605,18 @@ h2 {
         padding: 6px 12px;
     }
 
-    .btn-connect,
-    .btn-register {
-        font-size: 12px;
-        padding: 6px 12px;
+    /* Boutons mobiles plus petits */
+    .mobile-buttons .btn-connect,
+    .mobile-buttons .btn-register {
+        font-size: 14px;
+        padding: 8px 16px;
+        text-align: center;
     }
 
     /* Formations mobile */
     .card-header {
-        padding: 20px;
-        font-size: 24px;
+        width: 100%;
+        height: 150px;
     }
 
     .card-content {
@@ -572,12 +624,12 @@ h2 {
     }
 
     /* Article mobile */
-    .article-image {
-        height: 120px;
+    .article-image img {
+        aspect-ratio: 16/9;
     }
 
     .article-title {
-        font-size: 18px;
+        font-size: 1.25rem;
     }
 
     .article-info {
@@ -596,24 +648,20 @@ h2 {
         grid-template-rows: repeat(5, 120px);
     }
 
-    .projet-card {
-        font-size: 16px;
-    }
-
-    #collection-projet {
-        font-size: 24px;
+    .projet-card:nth-child(5) {
+        grid-column: span 1;
     }
 
     /* Titres plus petits */
     h2 {
-        font-size: 16px;
+        font-size: 1.25rem;
     }
 
     .formation-title {
-        font-size: 14px;
+        font-size: 1rem;
     }
 
     .justification-bar {
-        font-size: 12px;
+        font-size: 0.875rem;
     }
 }
